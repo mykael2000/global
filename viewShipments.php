@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $length = $_POST['lengthh'];
     $delivery_confirmation_message = $_POST['delivery_confirmation_message'];
     $upsql = "INSERT into shipments (tracking_id,products,details,delivery_confirmation_message,status,location,estimated_delivery,delivery_fee,sender_address,sender_name,sender_phone,receiver_address,receiver_name,receiver_phone,weightt,lengthh) VALUES ('$tracking_number','$products','$details','$delivery_confirmation_message','$status','$location','$estimated_delivery','$delivery_fee','$sender_address','$sender_name','$sender_phone','$receiver_address','$receiver_name','$receiver_phone','$weight','$length')";
-    $upquery = mysqli_query($con, $upsql);
+    $upquery = mysqli_query($conn, $upsql);
     $message = '<div class="alert alert-success d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24">
                 <use xlink:href="#check-circle-fill" />
