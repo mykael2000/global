@@ -9,7 +9,6 @@ if (isset($_POST['login'])) {
     if ($conn->connect_error) {
         die("Connection failed: " . $con->connect_error);
     }
-
     // Query to fetch user details based on email
     $query = "SELECT id, email, password FROM admin WHERE email = '$email'";
     $result = $conn->query($query);
