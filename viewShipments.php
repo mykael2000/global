@@ -22,9 +22,8 @@ if (isset($_POST['submit'])) {
     $receiver_phone = $_POST['receiver_phone'];
     $weight = $_POST['weightt'];
     $length = $_POST['lengthh'];
-    $mode_of_payment = $_POST['mode_of_payment'];
     $delivery_confirmation_message = $_POST['delivery_confirmation_message'];
-    $upsql = "INSERT into shipments (tracking_id,products,details,delivery_confirmation_message,status,location,estimated_delivery,delivery_fee,sender_address,sender_name,sender_phone,receiver_address,receiver_name,receiver_phone,weightt,lengthh,mode_of_payment) VALUES ('$tracking_number','$products','$details','$delivery_confirmation_message','$status','$location','$estimated_delivery','$delivery_fee','$sender_address','$sender_name','$sender_phone','$receiver_address','$receiver_name','$receiver_phone','$weight','$length','$mode_of_payment')";
+    $upsql = "INSERT into shipments (tracking_id,products,details,delivery_confirmation_message,status,location,estimated_delivery,delivery_fee,sender_address,sender_name,sender_phone,receiver_address,receiver_name,receiver_phone,weightt,lengthh) VALUES ('$tracking_number','$products','$details','$delivery_confirmation_message','$status','$location','$estimated_delivery','$delivery_fee','$sender_address','$sender_name','$sender_phone','$receiver_address','$receiver_name','$receiver_phone','$weight','$length')";
     $upquery = mysqli_query($con, $upsql);
     $message = '<div class="alert alert-success d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24">
