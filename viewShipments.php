@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
             </svg>
             <div>Shipment Added Successfully</div>
         </div>';
+        header("refresh:1;url=viewShipments.php");
 
 }
 ?>
